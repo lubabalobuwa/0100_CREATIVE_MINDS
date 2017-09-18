@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="564.447" Width="669.161" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold">
     <Grid>
-        <Canvas x:Name="firstDisplay" HorizontalAlignment="Left" Height="533" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="0,-1,0,0">
+        <Canvas x:Name="firstDisplay" HorizontalAlignment="Left" Height="533" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="0,-12,0,0">
             <Button x:Name="button1" Content="Register" Canvas.Left="10" Canvas.Top="383" Width="167" Height="52" Click="button1_Click"/>
             <Label x:Name="label" Content="Thanks for Banking with SLMC" Canvas.Left="151" Canvas.Top="10" Height="67" Width="342" FontSize="22"/>
             <Button x:Name="button" Content="Log In" Canvas.Top="281" Width="167" Canvas.Left="10" Height="52" Click="button_Click"/>
@@ -99,7 +99,7 @@
         <Canvas HorizontalAlignment="Left" Height="532" Margin="-1410,0,0,0" VerticalAlignment="Top" Width="660" Background="NavajoWhite">
             <Button x:Name="button3" Content="EXIT" Canvas.Left="426" Canvas.Top="480" Width="234" Height="42"/>
         </Canvas>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="478" Margin="-1410,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="660"/>
+        <TextBox x:Name="StatementBox" HorizontalAlignment="Left" Height="478" Margin="-1410,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="660"/>
         <Canvas HorizontalAlignment="Left" Height="532" Margin="-709,0,0,0" VerticalAlignment="Top" Width="660" Background="NavajoWhite">
             <TextBox x:Name="textBox5" Height="43" Canvas.Left="315" TextWrapping="Wrap" Text="TextBox" Canvas.Top="66" Width="216"/>
             <TextBox x:Name="textBox6" Height="28" Canvas.Left="315" TextWrapping="Wrap" Text="TextBox" Canvas.Top="144" Width="216"/>
