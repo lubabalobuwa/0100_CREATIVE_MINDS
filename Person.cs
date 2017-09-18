@@ -23,14 +23,16 @@ namespace Bank_slmc
 
         public bool female { get; set; }
 
-        public double cellphoneNumber { get; set; }
-
+        public string cellphoneNumber { get; set; }
         
-
-        public Person (string id)
+        public Person (string name,string sur, int age,string id,string cellph,string occptn)
         {
             this.id = id;
-
+            this.name = name;
+            this.surname = sur;
+            this.age = age;
+            this.cellphoneNumber = cellph;
+            this.occupation = occptn;
         }
 
 
