@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_slmc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="564.447" Width="669.161" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold">
+        Title="MainWindow" Background="NavajoWhite" Height="585.803" Width="673.907" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="446*"/>
-            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="523*"/>
+            <ColumnDefinition Width="143*"/>
         </Grid.ColumnDefinitions>
-        <Canvas x:Name="firstDisplay" HorizontalAlignment="Left" Height="534" VerticalAlignment="Top" Width="651" Background="NavajoWhite" Margin="67,639,-57,-640" Grid.ColumnSpan="2">
+        <Canvas x:Name="firstDisplay" HorizontalAlignment="Left" Width="661" Background="NavajoWhite" Margin="0,0,0,10" Grid.ColumnSpan="2">
+            <Button x:Name="Register" Content="Register" Canvas.Top="440" Width="124" Height="52" Canvas.Left="527" Click="Register_Click" />
             <Label x:Name="label" Content="Thanks for Banking with SLMC" Canvas.Left="151" Canvas.Top="10" Height="67" Width="342" FontSize="22"/>
-            <TextBox x:Name="textBox1" Height="39" Canvas.Left="192" TextWrapping="Wrap" Text="" Canvas.Top="113" Width="284" IsReadOnly="True"/>
-            <TextBox x:Name="textBox2" Height="37" Canvas.Left="192" TextWrapping="Wrap" Text="" Canvas.Top="184" Width="284" IsReadOnly="True"/>
+            <TextBox x:Name="AccnText" Height="39" Canvas.Left="192" TextWrapping="Wrap" Text="" Canvas.Top="113" Width="284" IsReadOnly="False" />
+            <TextBox x:Name="PinText" Height="37" Canvas.Left="192" TextWrapping="Wrap" Text="" Canvas.Top="184" Width="284" IsReadOnly="False" Cursor="None"/>
             <Label x:Name="label16" Content="Account Number:" Canvas.Left="10" Canvas.Top="113" Width="177"/>
             <Label x:Name="label17" Content="Pin:" Canvas.Left="10" Canvas.Top="184" Width="67" Height="37"/>
-            <Button x:Name="button_Copy1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="44" Canvas.Left="42" Canvas.Top="252"/>
+            <Button x:Name="button_Copy1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="44" Canvas.Left="42" Canvas.Top="252" Click="button_Copy1_Click"/>
             <Button x:Name="button1_Copy1" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Height="44" Canvas.Left="153" Canvas.Top="252"/>
             <Button x:Name="button2_Copy" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="77" Height="44" Canvas.Left="262" Canvas.Top="252"/>
             <Button x:Name="button3_Copy" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Height="42" Canvas.Left="42" Canvas.Top="318"/>
@@ -33,7 +34,7 @@
             <Button x:Name="button13" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Height="42"  Background="Gold" Canvas.Left="379" Canvas.Top="384"/>
             <Button x:Name="button14" Content="SLMC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Height="42" Background="Beige" Canvas.Left="379" Canvas.Top="450"/>
         </Canvas>
-        <Canvas x:Name="SignUpForm" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="272,0,-718,0" Grid.Column="1">
+        <Canvas x:Name="SignUpForm" HorizontalAlignment="Left" Height="547" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="10,-25,-5,0" Grid.ColumnSpan="2">
             <Label x:Name="label8" Content="Welcome to SLMC Bank!" HorizontalAlignment="Left" VerticalAlignment="Top" Width="330"/>
             <Label x:Name="label_Copy" Content="To open up your new Bank Account, please fill in this form:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="524" Canvas.Top="27"/>
             <Label x:Name="label1" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Canvas.Top="77"/>
@@ -45,20 +46,20 @@
             <Label x:Name="label6" Content="Gender:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Canvas.Top="159" Canvas.Left="309"/>
             <Label x:Name="label7" Content="Occupation:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Canvas.Top="253"/>
             <Label x:Name="label11" Content="Pin(4-digits):" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Canvas.Top="307"/>
-            <Button x:Name="button1_Copy" Content="Return to previous page" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" FontWeight="Bold" FontSize="12" Canvas.Top="499" Height="33" />
-            <Button x:Name="button_Copy" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="33" Canvas.Left="520" Canvas.Top="499" />
+            <Button x:Name="button1_Copy" Content="Return to previous page" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" FontWeight="Bold" FontSize="12" Canvas.Top="499" Height="44" />
+            <Button x:Name="button_Copy" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="33" Canvas.Left="520" Canvas.Top="499" Click="button_Copy_Click_1" />
             <TextBox x:Name="srnametxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Buwa" VerticalAlignment="Top" Width="202" Canvas.Left="107" Canvas.Top="81"/>
             <TextBox x:Name="nametxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Lubabalo" VerticalAlignment="Top" Width="202" Canvas.Left="416" Canvas.Top="81"/>
             <TextBox x:Name="celltxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0786085582" VerticalAlignment="Top" Width="158" Canvas.Left="139" Canvas.Top="131"/>
             <TextBox x:Name="agetxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="19" VerticalAlignment="Top" Width="88" Canvas.Left="396" Canvas.Top="127"/>
             <TextBox x:Name="idtxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="9806165540080" VerticalAlignment="Top" Width="173" Canvas.Left="124" Canvas.Top="169"/>
             <TextBox x:Name="addtxt" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202" Canvas.Left="194" Canvas.Top="203" />
-            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Height="30" Canvas.Left="416" Canvas.Top="162">
+            <ComboBox x:Name="genderBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Height="30" Canvas.Left="416" Canvas.Top="162">
                 <ComboBoxItem Content="Female" HorizontalAlignment="Left" Width="200"/>
                 <ComboBoxItem Content="Male" HorizontalAlignment="Left" Width="200"/>
                 <ComboBoxItem Content="Other" HorizontalAlignment="Left" Width="200"/>
             </ComboBox>
-            <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Canvas.Left="128" Canvas.Top="257">
+            <ComboBox x:Name="occupationBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Canvas.Left="128" Canvas.Top="257">
                 <ComboBoxItem Content="Employed" HorizontalAlignment="Left" Width="200"/>
                 <ComboBoxItem Content="Unemployed" HorizontalAlignment="Left" Width="200"/>
                 <ComboBoxItem Content="Student" HorizontalAlignment="Left" Width="200"/>
@@ -66,15 +67,15 @@
             </ComboBox>
             <TextBox x:Name="pintxt" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0616" VerticalAlignment="Top" Width="110" Canvas.Left="139" Canvas.Top="311" />
             <Label x:Name="label10" Content="Choose type of account:" Canvas.Top="407" Width="214"/>
-            <ComboBox x:Name="comboboxofTypes" Canvas.Left="219" Canvas.Top="407" Width="198">
+            <ComboBox x:Name="AccountTypeBox" Canvas.Left="219" Canvas.Top="407" Width="198">
                 <ComboBoxItem Content="Savings" HorizontalAlignment="Left" Width="196"/>
                 <ComboBoxItem Content="Cheque" HorizontalAlignment="Left" Width="196"/>
             </ComboBox>
             <Label x:Name="label18" Content="Confirm Pin:" Canvas.Top="355" Width="134"/>
-            <TextBox x:Name="textBox3" Height="27" Canvas.Left="139" TextWrapping="Wrap" Text="" Canvas.Top="355" Width="120"/>
+            <TextBox x:Name="pintxt2" Height="27" Canvas.Left="139" TextWrapping="Wrap" Text="" Canvas.Top="355" Width="120"/>
         </Canvas>
-        <Canvas x:Name="created" HorizontalAlignment="Left" Height="505" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="-1627,-556,0,0">
-            <Label x:Name="label12" Content="   Thanks for Creating a new &#xD;&#xA;             Bank Account, &#xD;&#xA;       we certainly hope you &#xD;&#xA;         will enjoy banking &#xD;&#xA;                   with&#xD;&#xA;             SLMC BANK" Canvas.Left="97" Canvas.Top="15" Height="262" Width="491" FontSize="36" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="created" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="-5,-1,0,0" Grid.ColumnSpan="2">
+            <Label x:Name="label12" Content="   Thanks for Creating a new &#xD;&#xA;             Bank Account, &#xD;&#xA;       we certainly hope you &#xD;&#xA;         will enjoy banking &#xD;&#xA;                   with&#xD;&#xA;             SLMC BANK" Canvas.Left="97" Canvas.Top="9" Height="268" Width="491" FontSize="36" RenderTransformOrigin="0.5,0.5">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -88,28 +89,30 @@
             <Label x:Name="label14" Content="To Exit press here:" Canvas.Left="10" Canvas.Top="423" Width="172"/>
             <Button x:Name="buttonnn3" Content="Main window" Canvas.Left="187" Canvas.Top="418" Width="133" Height="38" />
             <Label x:Name="label15" Content="Your Account Number:" Canvas.Left="10" Canvas.Top="293" Width="208"/>
-            <TextBox x:Name="acc_txt" Height="36" Canvas.Left="244" TextWrapping="Wrap" Canvas.Top="290" Width="295" IsReadOnly="True"/>
-            <Button x:Name="buttonn_2" Content="Log In" Canvas.Left="421" Canvas.Top="357" Width="131" Height="42" />
+            <Button x:Name="buttonn_2" Content="Log In" Canvas.Left="421" Canvas.Top="357" Width="131" Height="42" Click="buttonn_2_Click" />
+            <Label x:Name="AccNuDisplay" Content="" Canvas.Left="241" Canvas.Top="296" Width="230"/>
         </Canvas>
-        <Canvas x:Name="transactions" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="10,-23,-10,0" Grid.ColumnSpan="2">
+        <Canvas x:Name="transactions" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Margin="-5,23,0,0" Grid.ColumnSpan="2">
             <Label x:Name="labell1" Content="What would you like to do...?" Canvas.Left="10" Canvas.Top="148" Width="284" Height="43"/>
-            <Button x:Name="WithDraw_" Content="Withdrawal" Canvas.Left="39" Canvas.Top="210" Width="200" Height="50" Click="WithDraw__Click"/>
-            <Button x:Name="Deposit_" Content="Deposit" Canvas.Left="39" Canvas.Top="296" Width="200" Height="50" Click="Deposit__Click"/>
-            <Button x:Name="Balance" Content="Check Balance" Canvas.Left="39" Canvas.Top="388" Width="200" Height="50" Click="Balance_Click"/>
-            <Button x:Name="button19" Content="Statement" Canvas.Left="399" Canvas.Top="210" Width="200" Height="50"/>
-            <Button x:Name="button20" Content="Transfers" Canvas.Left="399" Canvas.Top="296" Width="200" Height="50"/>
+            <Button x:Name="buttonn2" Content="Withdrawal" Canvas.Left="39" Canvas.Top="210" Width="200" Height="50" Click="buttonn2_Click"/>
+            <Button x:Name="buttonn3" Content="Deposit" Canvas.Left="39" Canvas.Top="296" Width="200" Height="50" Click="buttonn3_Click"/>
+            <Button x:Name="button18" Content="Check Balance" Canvas.Left="39" Canvas.Top="388" Width="200" Height="50" Click="button18_Click"/>
+            <Button x:Name="button19" Content="Statement" Canvas.Left="399" Canvas.Top="210" Width="200" Height="50" Click="button19_Click"/>
+            <Button x:Name="button20" Content="Transfers" Canvas.Left="399" Canvas.Top="296" Width="200" Height="50" Click="button20_Click"/>
             <Button x:Name="button21" Content="Loan Estimation" Canvas.Left="399" Canvas.Top="388" Width="200" Height="50"/>
-            <Label x:Name="label20" Content="Information of the user and type of account displayed!" Height="65" Width="661"/>
+            <Label x:Name="label20" Content="Information of the user and type of account displayed!" Height="65" Width="661" Canvas.Top="10"/>
         </Canvas>
-        <Canvas x:Name="CardInformation" HorizontalAlignment="Left" Height="532" Margin="272,611,-718,-610" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Grid.Column="1">
+        <Canvas x:Name="CardInformation" HorizontalAlignment="Left" Height="532" Margin="195.228,536,-713,-535" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Grid.Column="1">
             <TextBox x:Name="textBox" Height="48" Canvas.Left="234" TextWrapping="Wrap" Text="TextBox" Canvas.Top="474" Width="230"/>
             <Button x:Name="button15" Content="Button" Canvas.Left="10" Canvas.Top="483" Width="205" Height="39"/>
             <Button x:Name="button35" Content="Button" Canvas.Left="489" Canvas.Top="483" Width="162" Height="39"/>
             <Image x:Name="image" Height="158" Width="354"/>
             <Label x:Name="label19" Content="Label" Canvas.Top="163" Height="207" Width="641"/>
         </Canvas>
-        <Canvas x:Name="withdrawal_Deposit" HorizontalAlignment="Left" Height="565" Margin="9,-52,-9,0" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Grid.ColumnSpan="2">
+        <Canvas x:Name="withdrawal_Deposit" HorizontalAlignment="Left" Height="532" Margin="11,-27,-6,0" VerticalAlignment="Top" Width="661" Background="NavajoWhite" Grid.ColumnSpan="2">
+            <TextBox x:Name="withdrawalCanvas" Height="48" Canvas.Left="298" TextWrapping="Wrap" Text="R" Canvas.Top="29" Width="291"/>
             <Label x:Name="label21" Content="Amount:" Canvas.Left="10" Canvas.Top="29" Width="221" Height="48"/>
+            <Button x:Name="button2" Content="Proceed" Canvas.Left="10" Canvas.Top="469" Width="603" Height="53"/>
             <Button x:Name="button_Copy2" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Height="47"  Canvas.Left="24" Canvas.Top="182"/>
             <Button x:Name="button1_Copy2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="47"  Canvas.Left="163" Canvas.Top="182"/>
             <Button x:Name="button2_Copy1" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="47"  Canvas.Left="300" Canvas.Top="182"/>
@@ -119,19 +122,18 @@
             <Button x:Name="button6_Copy" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Height="47"  Canvas.Left="24" Canvas.Top="327"/>
             <Button x:Name="button7_Copy" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="47"  Canvas.Left="163" Canvas.Top="327"/>
             <Button x:Name="button8_Copy" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="47"  Canvas.Left="300" Canvas.Top="327"/>
-            <Button x:Name="Enter" Content="Enter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="236" Height="47"  Background="LightGreen" Canvas.Left="24" Canvas.Top="398" Click="Enter_Click"/>
+            <Button x:Name="button9_Copy" Content="Enter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="236" Height="47"  Background="LightGreen" Canvas.Left="24" Canvas.Top="398"/>
             <Button x:Name="button10_Copy" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="47" Canvas.Left="300" Canvas.Top="398"/>
             <Button x:Name="button11_Copy" Content="Clear" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Height="47"  Background="Red" Canvas.Left="448" Canvas.Top="182"/>
             <Button x:Name="button12_Copy" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Height="47" Background="Gray" Canvas.Left="448" Canvas.Top="254"/>
             <Button x:Name="button13_Copy" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Height="47" Background="Gold" Canvas.Left="448" Canvas.Top="327"/>
             <Button x:Name="button14_Copy" Content="SLMC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Height="47" Background="Beige" Canvas.Left="448" Canvas.Top="398"/>
-            <TextBox x:Name="textBox4" Height="48" Canvas.Left="397" TextWrapping="Wrap" Canvas.Top="29" Width="159"/>
         </Canvas>
-        <Canvas x:Name="BalanceCanvas" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="660" Background="NavajoWhite" Margin="10,2,-9,-1" Grid.ColumnSpan="2">
+        <Canvas x:Name="StatementDisplay" HorizontalAlignment="Left" Height="532" Margin="11,-1,-5,0" VerticalAlignment="Top" Width="660" Background="NavajoWhite" Grid.ColumnSpan="2">
             <Button x:Name="button3" Content="EXIT" Canvas.Left="426" Canvas.Top="480" Width="234" Height="42"/>
-            <TextBox x:Name="TxtDisplay" HorizontalAlignment="Left" Height="478" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="660" Canvas.Top="-3"/>
+            <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="478" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="660" Canvas.Left="-10" Canvas.Top="10"/>
         </Canvas>
-        <Canvas HorizontalAlignment="Left" Height="531" Margin="-2100,2,0,0" VerticalAlignment="Top" Width="660" Background="NavajoWhite">
+        <Canvas x:Name="transfers" HorizontalAlignment="Left" Height="531" Margin="10,-9,-4,0" VerticalAlignment="Top" Width="660" Background="NavajoWhite" Grid.ColumnSpan="2">
             <TextBox x:Name="textBox5" Height="43" Canvas.Left="315" TextWrapping="Wrap" Text="TextBox" Canvas.Top="66" Width="216"/>
             <TextBox x:Name="textBox6" Height="28" Canvas.Left="315" TextWrapping="Wrap" Text="TextBox" Canvas.Top="144" Width="216"/>
             <TextBox x:Name="textBox7" Height="24" Canvas.Left="315" TextWrapping="Wrap" Text="TextBox" Canvas.Top="230" Width="120"/>
@@ -141,6 +143,13 @@
             <Label x:Name="label25" Content="Amount:" Canvas.Left="60" Canvas.Top="324" Width="120"/>
             <TextBox x:Name="textBox8" Height="45" Canvas.Left="202" TextWrapping="Wrap" Text="" Canvas.Top="312" Width="270"/>
             <Button x:Name="button4" Content="Proceed!" Canvas.Left="60" Canvas.Top="422" Width="483" Height="45"/>
+        </Canvas>
+        <Canvas x:Name="intro"  HorizontalAlignment="Left" Height="340" Margin="-645,-110,0,0" VerticalAlignment="Top" Width="500" OpacityMask="Black" Background="#FFA21A1A">
+            <MediaElement x:Name="video" Height="260" Canvas.Left="72" Canvas.Top="35" Width="260"/>
+        </Canvas>
+        <Canvas x:Name="checkBalanceCanvas" HorizontalAlignment="Left" Background="NavajoWhite" Height="240" Margin="165,135,0,0" VerticalAlignment="Top" Width="395" Grid.ColumnSpan="2">
+            <Label x:Name="balanceLabel" Content="" Canvas.Left="44" Canvas.Top="100" Height="38" Width="311"/>
+            <Label x:Name="label26" Content="Balance :" Canvas.Left="140" Canvas.Top="37" RenderTransformOrigin="0.169,1.212" Width="215"/>
         </Canvas>
 
 
